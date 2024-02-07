@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import AuthenticationPopUp from './components/AuthenticationPopUp/AuthenticationPopUp';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
+      <AuthenticationPopUp></AuthenticationPopUp>
     </div>
   );
 }
