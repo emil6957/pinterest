@@ -2,15 +2,13 @@ import React from "react";
 import { FC } from "react";
 import "./Button.scss";
 
-interface button { 
+interface ButtonProps { 
     title: String; 
 }
 
-const Button:FC<button> = ({ title }) => {
+const Button:FC<ButtonProps> = ({ title }) => {
     return (
-        <div>
-            <button>{title}</button>
-        </div>
+        <button className="button">{title}</button>
     )
 }
 
