@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 
-interface emailinput {
+interface EmailInputProps {
 }
 
-const EmailInput:FC<emailinput> = ({ }) => {
+const EmailInput:FC<EmailInputProps> = ({ }) => {
     return (
-        <div>
+        <div className="email-input">
             <label htmlFor="email">Email</label>
             <input type="email" placeholder="Email" name="email" id="email" />
         </div>
