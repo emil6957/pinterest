@@ -1,5 +1,14 @@
-@import "../../../assets/styles/variables";
+@use "../../../assets/styles/mixins";
 
 .email-input {
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+    }
+
+    &__input {
+        @include text-input;
+    }
 
 }
