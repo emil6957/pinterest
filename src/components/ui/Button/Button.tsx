@@ -4,11 +4,12 @@ import "./Button.scss";
 
 interface ButtonProps { 
     title: String; 
+    style: "red" | "google";
 }
 
-const Button:FC<ButtonProps> = ({ title }) => {
+const Button:FC<ButtonProps> = ({ title, style }) => {
     return (
-        <button className="button">{title}</button>
+        <button className={`button button--${style}`}>{title}</button>
     )
 }
 

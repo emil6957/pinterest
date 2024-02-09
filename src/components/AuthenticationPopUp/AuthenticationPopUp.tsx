@@ -9,8 +9,8 @@ const AuthenticationPopUp = ({ }) => {
         <div>
             <PasswordInput />
             <EmailInput />
-            <Button title={"Log In"} />
-            <Button title={"Continue with Google"} />
+            <Button title={"Log In"} style={"red"} />
+            <Button title={"Continue with Google"} style={"google"} />
         </div>
     )
 }

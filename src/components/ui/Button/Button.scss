@@ -6,6 +6,11 @@
     border-radius: 5rem;
     border: none;
     padding: .75rem;
+    cursor: pointer;
+    
+    :hover {
+        
+    }
 
     &--red {
         background-color: $red;
@@ -14,5 +19,7 @@
 
     &--google {
         background-color: white;
+        color: blue;
+        border: 1px solid grey;
     }
 }
