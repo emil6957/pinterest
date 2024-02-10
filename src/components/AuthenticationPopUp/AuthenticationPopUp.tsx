@@ -1,15 +1,16 @@
+import "./AuthenticationPopUp.scss";
 import React from "react";
 import Button from "../ui/Button/Button";
-import EmailInput from "../ui/EmailInput/EmailInput";
-import PasswordInput from "../ui/PasswordInput/PasswordInput";
+import LoginForm from "../LoginForm/LoginForm";
+import AuthTop from "../AuthTop/AuthTop"; 
 
 const AuthenticationPopUp = ({ }) => {
 
     return (
-        <div>
-            <PasswordInput />
-            <EmailInput />
-            <Button title={"Log In"} style={"red"} />
+        <div className="authentication-popup">
+            <AuthTop />
+            <LoginForm />
+            <p>OR</p>
             <Button title={"Continue with Google"} style={"google"} />
         </div>
     )
