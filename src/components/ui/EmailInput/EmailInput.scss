@@ -1,14 +1,14 @@
-@use "../../../assets/styles/mixins";
+@use "../../../assets/styles/mixins" as m;
 
 .email-input {
     display: flex;
     flex-direction: column;
-
+    
     &__label {
     }
-
+    
     &__input {
-        @include text-input;
+        @include m.text-input;
     }
 
 }
