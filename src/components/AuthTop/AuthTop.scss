@@ -8,17 +8,23 @@
         position: absolute;
         top: 0;
         right: 0;
+
+        background: none;
+        border: none;
+        padding: .5rem;
+        cursor: pointer;
     }
 
     &__content {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
         margin: auto;
-        box-sizing: border-box;
     }
 
     &__heading {
         font-size: 2rem;
+        font-weight: 500;
     }
 }
