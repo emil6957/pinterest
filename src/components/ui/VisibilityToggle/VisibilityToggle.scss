@@ -1,0 +1,21 @@
+@use "../../../assets/styles/mixins" as m;
+@import "../../../assets/styles/variables";
+
+.visibility-toggle {
+    @include m.absolute-center;
+    left: auto;
+    right: 4%;
+    transform: translate(0%, -50%);
+    cursor: pointer;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+
+    &:hover {
+        background-color: $border-hover-color;
+    }
+
+    &__img {
+        @include m.absolute-center;
+    }
+}
