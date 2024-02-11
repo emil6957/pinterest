@@ -7,9 +7,9 @@ import Button from "../ui/Button/Button";
 const LoginForm = ({}) => {
 
     return (
-        <form action="">
-            <PasswordInput />
+        <form className="login-form" action="">
             <EmailInput />
+            <PasswordInput />
             <Button style="red" title="Log In" />
         </form>
     );
