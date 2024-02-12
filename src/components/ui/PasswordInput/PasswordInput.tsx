@@ -4,7 +4,11 @@ import { ReactComponent as ShowPassword } from "../../../assets/images/show-pass
 import { ReactComponent as HidePassword } from "../../../assets/images/hide-password.svg";
 import VisibilityToggle from "../VisibilityToggle/VisibilityToggle";
 
-const PasswordInput = ({ }) => {
+type PasswordInputProps = {
+    showForgotPassword: Boolean;
+}
+
+const PasswordInput = ({ showForgotPassword }:PasswordInputProps) => {
     return (
         <div className="password-input">
             <label className="password-input__label" htmlFor="password">Password</label>
@@ -12,9 +16,9 @@ const PasswordInput = ({ }) => {
                 <input className="password-input__field" placeholder="Password" type="password" name="password" id="password" />
                 <VisibilityToggle />
             </div>
-            <div>
+            {showForgotPassword && <div>
                 <a href="">Forgot your Password?</a>
-            </div>
+            </div>}
         </div>
     );
 }
