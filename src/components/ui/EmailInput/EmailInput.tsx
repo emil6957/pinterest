@@ -1,10 +1,10 @@
 import React, { FC } from "react";
 import "./EmailInput.scss"
 
-interface EmailInputProps {
+type EmailInputProps = {
 }
 
-const EmailInput:FC<EmailInputProps> = ({ }) => {
+const EmailInput = ({ }: EmailInputProps) => {
     return (
         <div className="email-input">
             <label className="email-input__label" htmlFor="email">Email</label>
