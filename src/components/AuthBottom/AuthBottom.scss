@@ -1,0 +1,24 @@
+@use "../../assets/styles/mixins" as m;
+@import "../../assets/styles/variables";
+
+.auth-bottom {
+    @include m.flex-column-center;
+    gap: 1.5rem;
+
+    &__agreement {
+        font-size: $text-sm;
+        color: grey;
+    }
+
+    &__link {
+        font-size: $text-sm;
+        font-weight: bold;
+    }
+
+    &__btn {
+        background: none;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
