@@ -1,15 +1,25 @@
-import React from "react";
-import { FC } from "react";
+import React, { ReactElement } from "react";
 import "./Button.scss";
 
-interface ButtonProps { 
+// ? Might need to change the icon: ReactElement so its specifices SVG elements
+
+type ButtonProps = { 
     title: String; 
     style: "red" | "google";
+    icon?: {
+        img: ReactElement;
+        position: "start" | "end";
+    }
 }
 
-const Button:FC<ButtonProps> = ({ title, style }) => {
+const Button = ({ title, style, icon}:ButtonProps) => {
     return (
-        <button className={`button button--${style}`}>{title}</button>
+        <div className="button">
+            <button className={`button__main button__main--${style}`}>{title}</button>
+            {icon && <div className={`button__icon button__icon--pos-${icon.position}`}>
+                {icon.img}
+            </div>}
+        </div>
     )
 }
 

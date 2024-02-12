@@ -1,25 +1,41 @@
+@use "../../../assets/styles/mixins" as m;
 @import "../../../assets/styles/variables";
 
 .button {
-    width: 16rem;
-    font-weight: bold;
-    border-radius: 5rem;
-    border: none;
-    padding: .75rem;
+    position: relative;
     cursor: pointer;
+
+    &__main {
+        width: 16rem;
+        font-weight: bold;
+        border-radius: 5rem;
+        border: none;
+        padding: .75rem 2.5rem;
+        cursor: pointer;
+
+        &--red {
+            background-color: $red;
+            color: white;
+        }
     
-    :hover {
-        
+        &--google {
+            background-color: white;
+            color: blue;
+            border: 1px solid grey;
+        }
     }
 
-    &--red {
-        background-color: $red;
-        color: white;
-    }
+    &__icon {
+        height: 1.5rem;
+        width: 1.5rem;
+        @include m.absolute-center;
 
-    &--google {
-        background-color: white;
-        color: blue;
-        border: 1px solid grey;
+        &--pos-start {
+            left:  10%;
+        }
+
+        &--pos-end  {
+            left: 90%;
+        }
     }
 }
