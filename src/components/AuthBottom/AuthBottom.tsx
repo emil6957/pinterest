@@ -2,21 +2,27 @@ import React from "react";
 import "./AuthBottom.scss";
 
 type AuthBottomProps = {
+    isSigningUp: boolean;
+    toggleIsSigningUp: Function;
 }
 
-const AuthBottom = ({}:AuthBottomProps) => {
+const AuthBottom = ({isSigningUp, toggleIsSigningUp}:AuthBottomProps) => {
     return (
         <div className="auth-bottom">
             <p className="auth-bottom__agreement">
                 By continuing you are agreeing with your <a className="auth-bottom__link" href="">Terms Of Service </a>
                 and acknowledge you've read our <a className="auth-bottom__link" href="">Privacy Policy.</a>
             </p>
-            <button className="auth-bottom__btn">
-                Already a member? Log In!
-            </button>
-            {/* <button className="auth-bottom__btn">
-                Not a member yet? Sign Up!
-            </button> */}
+            { isSigningUp 
+                ?
+                <button className="auth-bottom__btn" onClick={() => toggleIsSigningUp()}>
+                    Not a member yet? Sign Up!
+                </button>
+                :
+                <button className="auth-bottom__btn" onClick={() => toggleIsSigningUp()}>
+                    Already a member? Log In!
+                </button>
+            }
         </div>
     )
 }
