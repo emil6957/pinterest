@@ -1,0 +1,50 @@
+@use "../../assets/styles/mixins" as m;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    &__home {
+        &-btn {
+            @include m.flex-center;
+            gap: .25rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin-right: 1rem;
+
+            &-text {
+                font-size: 1.25rem;
+                font-weight: 600;
+                color: red;
+            }
+
+            &-logo {
+
+            }
+        }
+    }
+
+    &__wrapper {
+        @include m.flex-center;
+    }
+
+    &__links-wrapper-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__links-wrapper {
+        @include m.flex-center;
+        gap: 1rem;
+    }
+
+    &__btn {
+        font-size: 1rem;
+        background: none;
+        border: none;
+    }
+}
