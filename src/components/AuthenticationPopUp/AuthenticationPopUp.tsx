@@ -7,12 +7,15 @@ import { ReactComponent as GoogleIcon} from "../../assets/images/google-icon.svg
 import SignupForm from "../SignupForm/SignupForm";
 import AuthBottom from "../AuthBottom/AuthBottom";
 import useToggle from "../../hooks/useToggle";
+import { useSelector } from "react-redux";
+import { RootState } from "../../services/states/store";
 
-const AuthenticationPopUp = ({ }) => {
+const AuthenticationPopUp = ({}) => {
+    const showPopUp = useSelector((state: RootState) => state.ShowPopup.value);
     const [isSigningUp, toggleIsSigningUp] = useToggle(false);
 
     return (
-        <div className="authentication-popup">
+        <div className="authentication-popup" style={{display: showPopUp ? "block" : "none"}}>
             <div className="authentication-popup__wrapper">
                 <AuthTop />
                 {isSigningUp ? <LoginForm /> : <SignupForm />}
