@@ -23,7 +23,7 @@ export const GoogleImageLarge: Story = {
 export const RedMedium: Story = {
     args: {
         title: "Button",
-        style: "google",
+        style: "red",
         size: "md",
     }
 }
