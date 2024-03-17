@@ -8,8 +8,8 @@ const initialState: ShowPopUpState = {
     value: false,
 };
 
-const ShowPopUpSlice = createSlice({
-    name: "popup",
+const showPopUpSlice = createSlice({
+    name: "showPopUp",
     initialState,
     reducers: {
         toggle: (state) => {
@@ -19,6 +19,6 @@ const ShowPopUpSlice = createSlice({
     },
 });
 
-export const { toggle} = ShowPopUpSlice.actions
+export const { toggle} = showPopUpSlice.actions
 
-export default ShowPopUpSlice.reducer;
+export default showPopUpSlice.reducer;
