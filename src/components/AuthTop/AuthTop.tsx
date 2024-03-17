@@ -2,12 +2,19 @@ import React from "react"
 import "./AuthTop.scss";
 import { ReactComponent as Logo } from "../../assets/images/logo.svg";
 import { ReactComponent as CloseIcon } from "../../assets/images/close-icon.svg";
+import { useDispatch } from "react-redux";
+import { toggle } from "../../services/states/ShowPopUpSlice/ShowPopUpSlice";
 
-const AuthTop = ({}) => {
+type AuthTopProps = {
+}
+
+const AuthTop = ({}:AuthTopProps) => {
+
+    const dispatch = useDispatch();
 
     return (
         <div className="auth-top">
-            <button className="auth-top__btn">
+            <button className="auth-top__btn" onClick={() => dispatch(toggle())}>
                 <CloseIcon />
             </button>
             <div className="auth-top__content">
