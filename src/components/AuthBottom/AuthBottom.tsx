@@ -1,12 +1,16 @@
 import React from "react";
 import "./AuthBottom.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { toggle } from "../../services/states/isSigningUp/isSigningUpSlice";
+import { RootState } from "../../services/states/store";
 
 type AuthBottomProps = {
-    isSigningUp: boolean;
-    toggleIsSigningUp: Function;
 }
 
-const AuthBottom = ({isSigningUp, toggleIsSigningUp}:AuthBottomProps) => {
+const AuthBottom = ({}:AuthBottomProps) => {
+    const isSigningUp = useSelector((State: RootState) => State.isSigningUp.value);
+    const dispatch = useDispatch();
+
     return (
         <div className="auth-bottom">
             <p className="auth-bottom__agreement">
@@ -15,11 +19,11 @@ const AuthBottom = ({isSigningUp, toggleIsSigningUp}:AuthBottomProps) => {
             </p>
             { isSigningUp 
                 ?
-                <button className="auth-bottom__btn" onClick={() => toggleIsSigningUp()}>
+                <button className="auth-bottom__btn" onClick={() => dispatch(toggle())}>
                     Not a member yet? Sign Up!
                 </button>
                 :
-                <button className="auth-bottom__btn" onClick={() => toggleIsSigningUp()}>
+                <button className="auth-bottom__btn" onClick={() => dispatch(toggle())}>
                     Already a member? Log In!
                 </button>
             }

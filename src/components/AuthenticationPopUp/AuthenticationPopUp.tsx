@@ -6,7 +6,6 @@ import AuthTop from "../AuthTop/AuthTop";
 import { ReactComponent as GoogleIcon} from "../../assets/images/google-icon.svg";
 import SignupForm from "../SignupForm/SignupForm";
 import AuthBottom from "../AuthBottom/AuthBottom";
-import useToggle from "../../hooks/useToggle";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../services/states/store";
 import { toggle } from "../../services/states/ShowPopUpSlice/ShowPopUpSlice";
@@ -14,7 +13,7 @@ import { toggle } from "../../services/states/ShowPopUpSlice/ShowPopUpSlice";
 const AuthenticationPopUp = ({}) => {
     const showPopUp = useSelector((state: RootState) => state.ShowPopup.value);
     const dispatch = useDispatch();
-    const [isSigningUp, toggleIsSigningUp] = useToggle(false);
+    const isSigningUp = useSelector((State: RootState) => State.isSigningUp.value);
 
     const popupBackgroundRef: any = useRef(null);
     const popupRef: any = useRef(null);
@@ -36,10 +35,10 @@ const AuthenticationPopUp = ({}) => {
         <div className="authentication-popup" style={{display: showPopUp ? "block" : "none"}} ref={popupBackgroundRef}>
             <div className="authentication-popup__wrapper" ref={popupRef}>
                 <AuthTop />
-                {isSigningUp ? <LoginForm /> : <SignupForm />}
+                {isSigningUp ? <SignupForm /> : <LoginForm />}
                 <p>OR</p>
                 <Button title={"Continue with Google"} style={"google"} size="lg" icon={{img: <GoogleIcon />, position: "end"}}/>
-                <AuthBottom isSigningUp={isSigningUp} toggleIsSigningUp={toggleIsSigningUp}/>
+                <AuthBottom />
             </div>
         </div>
     )

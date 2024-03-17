@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import ShowPopupReducer from "./ShowPopUpSlice/ShowPopUpSlice";
+import isSigningUpReducer from "./isSigningUp/isSigningUpSlice";
 
 export const store = configureStore({
     reducer: {
         ShowPopup: ShowPopupReducer,
+        isSigningUp: isSigningUpReducer,
     },
 });
 
