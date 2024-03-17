@@ -15,7 +15,7 @@ const SignupForm = ({}) => {
             <EmailInput register={register} errors={errors} />
             <PasswordInput register={register} errors={errors} showForgotPassword={false} />
             <BirthInput />
-            <Button title="Continue" style="red" />
+            <Button title="Continue" style="red" size="lg" />
         </form>
     )
 }

@@ -17,7 +17,7 @@ const AuthenticationPopUp = ({ }) => {
                 <AuthTop />
                 {isSigningUp ? <LoginForm /> : <SignupForm />}
                 <p>OR</p>
-                <Button title={"Continue with Google"} style={"google"} icon={{img: <GoogleIcon />, position: "end"}}/>
+                <Button title={"Continue with Google"} style={"google"} size="lg" icon={{img: <GoogleIcon />, position: "end"}}/>
                 <AuthBottom isSigningUp={isSigningUp} toggleIsSigningUp={toggleIsSigningUp}/>
             </div>
         </div>

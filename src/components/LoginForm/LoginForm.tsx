@@ -22,7 +22,7 @@ const LoginForm = ({}) => {
         <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
             <EmailInput register={register} errors={errors} />
             <PasswordInput register={register} errors={errors} showForgotPassword={true} />
-            <Button title="Log In" style="red" />
+            <Button title="Log In" style="red" size="lg" />
         </form>
     );
 }

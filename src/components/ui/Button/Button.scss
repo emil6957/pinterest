@@ -4,9 +4,9 @@
 .button {
     position: relative;
     cursor: pointer;
+    width: fit-content;
 
     &__main {
-        width: 16rem;
         font-weight: bold;
         border-radius: 5rem;
         border: none;
@@ -21,7 +21,25 @@
         &--google {
             background-color: white;
             color: blue;
-            border: 1px solid grey;
+            border: 1px solid gray;
+        }
+
+        &--gray {
+            background-color: lightgray;
+            color: black;
+        }
+
+        &--lg {
+            min-width: 16rem;
+        }
+
+        &--md {
+            min-width: 8rem;
+        }
+
+        &--sm {
+            padding-right: 1rem;
+            padding-left: 1rem;
         }
     }
 

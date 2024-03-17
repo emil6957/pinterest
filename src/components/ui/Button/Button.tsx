@@ -5,17 +5,18 @@ import "./Button.scss";
 
 type ButtonProps = { 
     title: String; 
-    style: "red" | "google";
+    style: "red" | "google" | "gray";
+    size: "lg" | "md" | "sm";
     icon?: {
         img: ReactElement;
         position: "start" | "end";
     }
 }
 
-const Button = ({ title, style, icon}:ButtonProps) => {
+const Button = ({ title, style, size, icon}:ButtonProps) => {
     return (
         <div className="button">
-            <button className={`button__main button__main--${style}`}>{title}</button>
+            <button className={`button__main button__main--${style} button__main--${size}`}>{title}</button>
             {icon && <div className={`button__icon button__icon--pos-${icon.position}`}>
                 {icon.img}
             </div>}
