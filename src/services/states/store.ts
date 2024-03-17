@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import ShowPopupReducer from "./ShowPopUpSlice/ShowPopUpSlice";
 
 export const store = configureStore({
-    reducer: {},
+    reducer: {
+        ShowPopup: ShowPopupReducer,
+    },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
