@@ -47,4 +47,10 @@
         background: none;
         border: none;
     }
+
+    &__authentication {
+        display: flex;
+        gap: .5rem;
+        padding-left: 1rem;
+    }
 }
