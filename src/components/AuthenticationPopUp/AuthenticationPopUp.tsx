@@ -12,8 +12,8 @@ import { toggle } from "../../services/states/ShowPopUpSlice/ShowPopUpSlice";
 
 const AuthenticationPopUp = ({}) => {
     const showPopUp = useSelector((state: RootState) => state.ShowPopup.value);
-    const dispatch = useDispatch();
     const isSigningUp = useSelector((State: RootState) => State.isSigningUp.value);
+    const dispatch = useDispatch();
 
     const popupBackgroundRef: any = useRef(null);
     const popupRef: any = useRef(null);
