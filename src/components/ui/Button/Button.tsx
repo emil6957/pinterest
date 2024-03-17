@@ -2,6 +2,7 @@ import React, { ReactElement } from "react";
 import "./Button.scss";
 
 // ? Might need to change the icon: ReactElement so its specifices SVG elements
+// ! Change line 15 (onCliCk) to not be optional once i have all buttons have functions
 
 type ButtonProps = { 
     title: String; 
@@ -11,12 +12,13 @@ type ButtonProps = {
         img: ReactElement;
         position: "start" | "end";
     }
+    onClick?: any
 }
 
-const Button = ({ title, style, size, icon}:ButtonProps) => {
+const Button = ({ title, style, size, icon, onClick}:ButtonProps) => {
     return (
         <div className="button">
-            <button className={`button__main button__main--${style} button__main--${size}`}>{title}</button>
+            <button onClick={() => onClick()} className={`button__main button__main--${style} button__main--${size}`}>{title}</button>
             {icon && <div className={`button__icon button__icon--pos-${icon.position}`}>
                 {icon.img}
             </div>}
