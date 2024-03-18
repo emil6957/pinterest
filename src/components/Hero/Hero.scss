@@ -1,0 +1,30 @@
+$offset: 5rem;
+
+// ! Might need to change the way this is done so it can be dynamic
+
+.hero {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    > .hero__card-container:nth-child(7n + 2),
+    > .hero__card-container:nth-child(7n + 6) {
+        transform: translateY($offset)
+    }
+
+    > .hero__card-container:nth-child(7n + 3),
+    > .hero__card-container:nth-child(7n + 5) {
+        transform: translateY(calc($offset*2))
+    }
+
+    > .hero__card-container:nth-child(7n + 4) {
+        transform: translateY(calc($offset*3))
+    }
+
+    &__card-container {
+        width: fit-content;
+        height: fit-content;
+    }
+}
