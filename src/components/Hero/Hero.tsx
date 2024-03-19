@@ -3,6 +3,8 @@ import "./Hero.scss";
 import Card from "../Card/Card";
 import image from "../../assets/images/image.png";
 
+// TODO Create a dot carousel
+
 type HeroProps = {
 
 }
@@ -19,7 +21,13 @@ const Hero = ({}:HeroProps) => {
 
     return (
         <div className="hero">
-            {Cards}
+            <div className="hero__title-container">
+                <h1 className="hero__title">Get your next</h1>
+                <h1 className="hero__title">Test</h1>
+            </div>
+            <div className="hero__cards-wrapper">
+                {Cards}
+            </div>
         </div>
     )
 };

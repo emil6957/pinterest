@@ -3,28 +3,50 @@ $offset: 5rem;
 // ! Might need to change the way this is done so it can be dynamic
 
 .hero {
+    height: 100vh;
     width: 80%;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-
-    > .hero__card-container:nth-child(7n + 2),
-    > .hero__card-container:nth-child(7n + 6) {
-        transform: translateY($offset)
-    }
-
-    > .hero__card-container:nth-child(7n + 3),
-    > .hero__card-container:nth-child(7n + 5) {
-        transform: translateY(calc($offset*2))
-    }
-
-    > .hero__card-container:nth-child(7n + 4) {
-        transform: translateY(calc($offset*3))
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &__card-container {
         width: fit-content;
         height: fit-content;
+    }
+
+    &__title-container {
+        height: fit-content;
+        align-self: center;
+        transform: translateY(4rem)
+    }
+
+    &__title {
+        display: block;
+        height: fit-content;
+        margin: 0;
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    &__cards-wrapper {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        overflow: hidden;
+
+        > .hero__card-container:nth-child(7n + 2),
+        > .hero__card-container:nth-child(7n + 6) {
+            transform: translateY($offset)
+        }
+
+        > .hero__card-container:nth-child(7n + 3),
+        > .hero__card-container:nth-child(7n + 5) {
+            transform: translateY(calc($offset*2))
+        }
+
+        > .hero__card-container:nth-child(7n + 4) {
+            transform: translateY(calc($offset*3))
+        }
     }
 }
