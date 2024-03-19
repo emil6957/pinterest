@@ -3,6 +3,7 @@ import Hero from "./Hero";
 
 const meta: Meta<typeof Hero> = {
     component: Hero,
+    title: "Hero",
 }
 
 export default meta;
