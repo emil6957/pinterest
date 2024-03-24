@@ -1,0 +1,25 @@
+.home-page-logged-out {
+    > .home-page-logged-out__section:nth-child(2n) {
+        flex-direction: row-reverse;
+    }
+
+    &__section {
+        height: 100vh;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        border: 1px solid black;
+        padding: 0 8rem;
+    }
+    
+    &__img {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+
+    &__text {
+        font-size: 3rem;
+        width: 500px;
+    }
+}
