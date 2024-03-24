@@ -3,9 +3,7 @@ $offset: 5rem;
 // ! Might need to change the way this is done so it can be dynamic
 
 .hero {
-    position: absolute;
-    left: 50%;
-    translate: -50%;
+    position: relative;
     height: 100vh;
     padding-top: 4rem;
     display: flex;
@@ -21,7 +19,11 @@ $offset: 5rem;
     &__title-container {
         height: fit-content;
         align-self: center;
-        transform: translateY(4rem)
+        transform: translateY(4rem);
+        position: absolute;
+        top: 0;
+        left: 50%;
+        translate: -50%;
     }
 
     &__title {
@@ -34,6 +36,10 @@ $offset: 5rem;
 
     &__cards-wrapper {
         display: grid;
+        top: 10%;
+        position: absolute;
+        left: 50%;
+        translate: -50%;
         gap: 1rem;
         margin: auto;
         grid-template-columns: repeat(7, 1fr);
