@@ -3,11 +3,13 @@ $offset: 5rem;
 // ! Might need to change the way this is done so it can be dynamic
 
 .hero {
+    position: absolute;
+    left: 50%;
+    translate: -50%;
     height: 100vh;
-    width: 80%;
     padding-top: 4rem;
-    margin: auto;
     display: flex;
+    overflow: hidden;
     flex-direction: column;
     justify-content: center;
 
@@ -32,6 +34,8 @@ $offset: 5rem;
 
     &__cards-wrapper {
         display: grid;
+        gap: 1rem;
+        margin: auto;
         grid-template-columns: repeat(7, 1fr);
         grid-template-rows: repeat(3, 1fr);
         overflow: hidden;
