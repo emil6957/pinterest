@@ -1,6 +1,14 @@
 .home-page-logged-out {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
     > .home-page-logged-out__section:nth-child(2n) {
         flex-direction: row-reverse;
+    }
+
+    &__hero {
+        scroll-snap-align: start;
     }
 
     &__section {
@@ -10,6 +18,7 @@
         align-items: center;
         border: 1px solid black;
         padding: 0 8rem;
+        scroll-snap-align: start;
     }
     
     &__img {
