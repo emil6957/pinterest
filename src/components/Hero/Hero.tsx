@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Hero.scss";
 import Card from "../Card/Card";
 import image from "../../assets/images/image.png";
@@ -10,6 +10,31 @@ type HeroProps = {
 }
 
 const Hero = ({}:HeroProps) => {
+    const [carouselText, setCarouselText] = useState(["Test","Second Test", "Another Test", "Last Test",]);
+    const [carouselSelection, setCarouselSelection] = useState(0);
+
+    useEffect(() => {
+      const nextCarouselItem = () => {
+        setCarouselSelection(prevState => {
+            if( prevState === carouselText.length-1 ) {
+                return 0;
+            } else { 
+                return prevState+1
+            }
+        });
+      }
+
+      const timer = setInterval(nextCarouselItem, 6000)
+
+      return () => {
+          clearInterval(timer);
+      }
+      
+      
+      
+
+    }, [])
+
 
     let Cards = [];
 
@@ -23,7 +48,15 @@ const Hero = ({}:HeroProps) => {
         <div className="hero">
             <div className="hero__title-container">
                 <h1 className="hero__title">Get your next</h1>
-                <h1 className="hero__title">Test</h1>
+                <div className="hero__carousel">
+                    <h1 className="hero__title">{carouselText[carouselSelection]}</h1>
+                    <ul className="hero__carousel-list">
+                        <li><button className="hero__carousel-button" /></li>
+                        <li><button className="hero__carousel-button" /></li>
+                        <li><button className="hero__carousel-button" /></li>
+                        <li><button className="hero__carousel-button" /></li>
+                    </ul>
+                </div>
             </div>
             <div className="hero__cards-wrapper">
                 {Cards}
