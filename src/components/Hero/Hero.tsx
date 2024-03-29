@@ -29,10 +29,6 @@ const Hero = ({}:HeroProps) => {
       return () => {
           clearInterval(timer);
       }
-      
-      
-      
-
     }, [])
 
 
@@ -41,8 +37,12 @@ const Hero = ({}:HeroProps) => {
     const columns = 7;
     const rows = 3;
     for(let i = 0; i < columns*rows; i++) {
-        Cards.push(<div className="hero__card-container"><Card size="sm" img={image} /></div>)
+        Cards.push(<div key={i} className="hero__card-container"><Card size="sm" img={image} /></div>)
     }
+
+    const carouselButtons = carouselText.map((curr, i) => 
+        <li key={i}><button className={`hero__carousel-button ${carouselSelection === i ? "active" : ""}`}/></li>
+    );
 
     return (
         <div className="hero">
@@ -51,10 +51,7 @@ const Hero = ({}:HeroProps) => {
                 <div className="hero__carousel">
                     <h1 className="hero__title">{carouselText[carouselSelection]}</h1>
                     <ul className="hero__carousel-list">
-                        <li><button className="hero__carousel-button" /></li>
-                        <li><button className="hero__carousel-button" /></li>
-                        <li><button className="hero__carousel-button" /></li>
-                        <li><button className="hero__carousel-button" /></li>
+                        {carouselButtons}
                     </ul>
                 </div>
             </div>
