@@ -36,16 +36,24 @@ $offset: 5rem;
 
     &__carousel {
         z-index: 1;     
+
+        &-text {
+            display: none;
+            opacity: 0;
+
+            &.active {
+                display: block;
+                opacity: 1;
+                animation: 400ms slideUp;
+            }
+        }
+
         &-list {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 1rem;
             list-style-type: none;
-
-            > li {
-            }
-
         }
 
         &-button {
@@ -56,10 +64,24 @@ $offset: 5rem;
             border: none;
             padding: 0;
             background-color: blue;
+            cursor: pointer;
         }
 
         &-button.active {
             background-color: red;
+        }
+    }
+
+    &-carousel {
+        &--titles {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &--buttons {
         }
     }
 
@@ -90,6 +112,17 @@ $offset: 5rem;
 
         > .hero__card-container:nth-child(7n + 4) {
             transform: translateY(calc($offset*3))
+        }
+    }
+
+    @keyframes slideUp {
+        0% {
+            transform: translateY(2rem);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 100;
         }
     }
 }
