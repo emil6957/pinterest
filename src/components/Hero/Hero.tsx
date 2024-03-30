@@ -3,8 +3,6 @@ import "./Hero.scss";
 import Card from "../Card/Card";
 import image from "../../assets/images/image.png";
 
-// TODO Create a dot carousel
-
 type HeroProps = {
 
 }
@@ -31,7 +29,7 @@ const Hero = ({ }: HeroProps) => {
         const newTimer: number = window.setInterval(func, ms);
         setCarouselTimerId(newTimer);
     }
-    
+
     const handleCarouselButton = (i: number, timer: number, func: Function, ms: number) => {
         setCarouselSelection(i);
         resetTimer(timer, func, ms);
@@ -42,7 +40,7 @@ const Hero = ({ }: HeroProps) => {
         setCarouselTimerId(timer);
 
         return () => {
-            clearInterval(timer);
+            clearInterval(carouselTimerId);
         }
     }, []);
 
