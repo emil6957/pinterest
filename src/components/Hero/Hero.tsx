@@ -53,10 +53,10 @@ const Hero = ({}:HeroProps) => {
             <div className="hero__title-container">
                 <h1 className="hero__title">Get your next</h1>
                 <div className="hero__carousel">
-                    <ul className="hero__carousel-list hero-carousel--titles">
+                    <ul className="hero__carousel-titles">
                         {carouselTitles}
                     </ul>
-                    <ul className="hero__carousel-list hero-carousel--buttons">
+                    <ul className="hero__carousel-buttons">
                         {carouselButtons}
                     </ul>
                 </div>
