@@ -40,8 +40,12 @@ const Hero = ({}:HeroProps) => {
         Cards.push(<div key={i} className="hero__card-container"><Card size="sm" img={image} /></div>)
     }
 
+    const carouselTitles = carouselText.map((curr, i) => 
+        <li key={i}><p className={`hero__title hero__carousel-text ${carouselSelection === i ? "active" : ""}`}>{curr}</p></li>
+    )
+
     const carouselButtons = carouselText.map((curr, i) => 
-        <li key={i}><button className={`hero__carousel-button ${carouselSelection === i ? "active" : ""}`}/></li>
+        <li key={i}><button onClick={() => setCarouselSelection(i)} className={`hero__carousel-button ${carouselSelection === i ? "active" : ""}`}/></li>
     );
 
     return (
@@ -49,8 +53,10 @@ const Hero = ({}:HeroProps) => {
             <div className="hero__title-container">
                 <h1 className="hero__title">Get your next</h1>
                 <div className="hero__carousel">
-                    <h1 className="hero__title">{carouselText[carouselSelection]}</h1>
-                    <ul className="hero__carousel-list">
+                    <ul className="hero__carousel-list hero-carousel--titles">
+                        {carouselTitles}
+                    </ul>
+                    <ul className="hero__carousel-list hero-carousel--buttons">
                         {carouselButtons}
                     </ul>
                 </div>
