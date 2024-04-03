@@ -4,7 +4,8 @@ $offset: 5rem;
 
 .hero {
     position: relative;
-    height: 100vh;
+    // 74px = header height
+    height: calc(100vh - 74px);
     padding-top: 4rem;
     overflow: hidden;
     display: flex;
