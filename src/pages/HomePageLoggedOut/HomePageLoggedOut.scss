@@ -6,11 +6,12 @@
 
     // Not display scrollbar for Edge/Firefox/Chrome/Safari/Opera
     scrollbar-width: none;
+
     &::-webskit-scroll {
         display: none;
     }
 
-    > .home-page-logged-out__section:nth-child(2n) {
+    >.home-page-logged-out__section:nth-child(2n) {
         flex-direction: row-reverse;
     }
 
@@ -19,15 +20,26 @@
     }
 
     &__section {
-        height: 100vh;
+        height: calc(100vh - 74px);
         display: flex;
-        justify-content: space-between; 
+        justify-content: space-between;
         align-items: center;
         border: 1px solid black;
         padding: 0 8rem;
         scroll-snap-align: start;
     }
-    
+
+    .home-page-logged-out__section:nth-last-child(1) {
+        flex-direction: column;
+    }
+
+    &__call-to-action {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
     &__img {
         width: 200px;
         height: 200px;

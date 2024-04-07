@@ -1,8 +1,10 @@
 .footer {
     width: 60%;
-    margin: auto;
+    margin: 0 auto 0;
+    background-color: white;
 
     &__list {
+        height: 4rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
