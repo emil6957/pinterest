@@ -4,8 +4,6 @@ import { useDispatch } from "react-redux";
 import { toggle } from "../../services/states/ShowPopUpSlice/ShowPopUpSlice";
 import Auth from "../Auth/Auth";
 
-// TODO: Might have to remake this so it isnt initially a popup to make it more reuseable
-
 const AuthenticationPopUp = () => {
     const dispatch = useDispatch();
 
