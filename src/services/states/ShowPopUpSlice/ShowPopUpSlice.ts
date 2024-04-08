@@ -19,6 +19,6 @@ const showPopUpSlice = createSlice({
     },
 });
 
-export const { toggle} = showPopUpSlice.actions
+export const { toggle } = showPopUpSlice.actions
 
 export default showPopUpSlice.reducer;

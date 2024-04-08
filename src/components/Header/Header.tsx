@@ -10,7 +10,7 @@ type HeaderProps = {
 
 }
 
-const Header = ({}:HeaderProps) => {
+const Header = ({ }: HeaderProps) => {
     const dispatch = useDispatch();
 
     return (
@@ -36,8 +36,8 @@ const Header = ({}:HeaderProps) => {
                     <button className="header__btn">Blog</button>
                 </div>
                 <div className="header__authentication">
-                    <Button title="Log In" style="red" size="sm" onClick={() => {dispatch(toggle()); dispatch(setFalse())}}/>
-                    <Button title="Sign Up" style="gray" size="sm" onClick={() => {dispatch(toggle()); dispatch(setTrue())}}/>
+                    <Button title="Log In" style="red" size="sm" onClick={() => { dispatch(toggle()); dispatch(setFalse()) }} />
+                    <Button title="Sign Up" style="gray" size="sm" onClick={() => { dispatch(toggle()); dispatch(setTrue()) }} />
                 </div>
             </div>
         </header>
