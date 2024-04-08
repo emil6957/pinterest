@@ -1,14 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import "./AuthenticationPopUp.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../services/states/store";
+import { useDispatch } from "react-redux";
 import { toggle } from "../../services/states/ShowPopUpSlice/ShowPopUpSlice";
 import Auth from "../Auth/Auth";
 
 // TODO: Might have to remake this so it isnt initially a popup to make it more reuseable
 
 const AuthenticationPopUp = () => {
-    const showPopUp = useSelector((state: RootState) => state.ShowPopup.value);
     const dispatch = useDispatch();
 
     const popupBackgroundRef: any = useRef(null);
@@ -29,7 +27,7 @@ const AuthenticationPopUp = () => {
     });
 
     return (
-        <div className="authentication-popup" style={{ display: showPopUp ? "block" : "none" }} ref={popupBackgroundRef}>
+        <div className="authentication-popup" ref={popupBackgroundRef}>
             <Auth authRef={authRef} />
         </div>
     )
