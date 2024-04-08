@@ -12,10 +12,11 @@ const AuthenticationPopUp = () => {
     const dispatch = useDispatch();
 
     const popupBackgroundRef: any = useRef(null);
-    const popupRef: any = useRef(null);
+    const authRef: any = useRef(null);
+
     useEffect(() => {
         const handler = (e: any) => {
-            if (!popupRef.current.contains(e.target) && popupBackgroundRef.current.contains(e.target)) {
+            if (!authRef.current.contains(e.target) && popupBackgroundRef.current.contains(e.target)) {
                 dispatch(toggle());
             }
         };
@@ -29,7 +30,7 @@ const AuthenticationPopUp = () => {
 
     return (
         <div className="authentication-popup" style={{ display: showPopUp ? "block" : "none" }} ref={popupBackgroundRef}>
-            <Auth />
+            <Auth authRef={authRef} />
         </div>
     )
 }

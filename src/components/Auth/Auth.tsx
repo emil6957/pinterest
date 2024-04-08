@@ -1,6 +1,6 @@
-import React, { FC, useRef } from "react";
+import React from "react";
 import "./Auth.scss";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../services/states/store";
 import AuthTop from "../AuthTop/AuthTop";
 import AuthBottom from "../AuthBottom/AuthBottom";
@@ -9,12 +9,15 @@ import LoginForm from "../LoginForm/LoginForm";
 import Button from "../ui/Button/Button";
 import { ReactComponent as GoogleIcon } from "../../assets/images/google-icon.svg";
 
-const Auth: FC = () => {
+type AuthProps = {
+    authRef: any
+}
+
+const Auth = ({ authRef }: AuthProps) => {
     const isSigningUp = useSelector((State: RootState) => State.isSigningUp.value);
-    const popupRef: any = useRef(null);
 
     return (
-        <div className="auth" ref={popupRef}>
+        <div className="auth" ref={authRef}>
             <AuthTop />
             {isSigningUp ? <SignupForm /> : <LoginForm />}
             <p>OR</p>
