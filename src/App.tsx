@@ -4,13 +4,12 @@ import Header from './components/Header/Header';
 import HomePageLoggedOut from './pages/HomePageLoggedOut/HomePageLoggedOut';
 
 const App = () => {
-  return (
-    <div className="App">
-        <Header />
-        <AuthenticationPopUp/>
-        <HomePageLoggedOut />
-    </div>
-  );
+    return (
+        <div className="App">
+            <Header />
+            <HomePageLoggedOut />
+        </div>
+    );
 }
 
 export default App;
