@@ -12,19 +12,21 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import Hero from "./Hero";
 
+// TODO: Write tests
+
 describe("<Hero />", () => {
     test("should render component", () => {
-        render(<Hero/>);
+        render(<Hero />);
         const hero = screen.getByRole("div");
         expect(hero).toBeInTheDocument();
     })
 
     test("should render cards", () => {
-        render(<Hero/>); 
+        render(<Hero />);
     })
 
     test("button should fire event", () => {
-        render(<Hero/>); 
+        render(<Hero />);
         const button = screen.getByRole("button");
         fireEvent.click(button);
         expect(button).toBeCalled;
