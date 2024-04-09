@@ -29,6 +29,6 @@ describe("<Hero />", () => {
         render(<Hero />);
         const button = screen.getByRole("button");
         fireEvent.click(button);
-        expect(button).toBeCalled;
+        expect(button).toBeCalled();
     })
 });
