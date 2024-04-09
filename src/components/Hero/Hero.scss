@@ -20,6 +20,7 @@ $offset: 5rem;
         top: 0;
         left: 50%;
         translate: -50%;
+        z-index: 2;
     }
 
     &__title {
@@ -86,17 +87,17 @@ $offset: 5rem;
         grid-template-rows: repeat(3, 1fr);
         overflow: hidden;
 
-        > .hero__card-container:nth-child(7n + 2),
-        > .hero__card-container:nth-child(7n + 6) {
+        >.hero__card-container:nth-child(7n + 2),
+        >.hero__card-container:nth-child(7n + 6) {
             transform: translateY($offset)
         }
 
-        > .hero__card-container:nth-child(7n + 3),
-        > .hero__card-container:nth-child(7n + 5) {
+        >.hero__card-container:nth-child(7n + 3),
+        >.hero__card-container:nth-child(7n + 5) {
             transform: translateY(calc($offset*2))
         }
 
-        > .hero__card-container:nth-child(7n + 4) {
+        >.hero__card-container:nth-child(7n + 4) {
             transform: translateY(calc($offset*3))
         }
     }
@@ -111,6 +112,7 @@ $offset: 5rem;
             transform: translateY(2rem);
             opacity: 0;
         }
+
         100% {
             transform: translateY(0);
             opacity: 100;
