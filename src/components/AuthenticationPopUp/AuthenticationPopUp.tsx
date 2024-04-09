@@ -26,7 +26,9 @@ const AuthenticationPopUp = () => {
 
     return (
         <div className="authentication-popup" ref={popupBackgroundRef}>
-            <Auth authRef={authRef} />
+            <div className="authentication-popup__wrapper">
+                <Auth authRef={authRef} />
+            </div>
         </div>
     )
 }

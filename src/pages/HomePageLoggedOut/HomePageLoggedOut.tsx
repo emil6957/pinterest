@@ -2,7 +2,7 @@ import React from "react";
 import "./HomePageLoggedOut.scss";
 import Hero from "../../components/Hero/Hero";
 import Footer from "../../components/Footer/Footer";
-import AuthenticationPopUp from "../../components/AuthenticationPopUp/AuthenticationPopUp";
+import Auth from "../../components/Auth/Auth";
 
 type HomePageLoggedOutProps = {
 
@@ -38,7 +38,7 @@ const HomePageLoggedOut = ({ }: HomePageLoggedOutProps) => {
             <section className="home-page-logged-out__section">
                 <div className="home-page-logged-out__call-to-action">
                     <p className="home-page-logged-out__text">Sign up now and explore!</p>
-                    <AuthenticationPopUp />
+                    <Auth authRef={null} />
                 </div>
                 <Footer />
             </section>

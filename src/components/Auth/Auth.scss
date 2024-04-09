@@ -1,8 +1,6 @@
 @use "../../assets/styles/mixins" as m;
 
 .auth {
-    @include m.absolute-center;
-    top: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
