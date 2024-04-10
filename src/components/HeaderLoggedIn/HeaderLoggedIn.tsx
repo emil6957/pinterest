@@ -19,9 +19,7 @@ const HeaderLoggedIn = ({ }: HeaderLoggedInProps) => {
             </div>
             <SearchBar />
             <button className="header-logged-in__notification-btn">
-                <NotificationBell />
-            </button>
-            <button>
+                <NotificationBell className="header-logged-in__icon" />
             </button>
         </header>
     )

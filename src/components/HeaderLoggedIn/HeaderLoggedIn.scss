@@ -1,0 +1,28 @@
+.header-logged-in {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    &__links-wrapper {
+        display: flex;
+        gap: .5rem;
+        cursor: pointer;
+    }
+
+    &__btn {
+        font-size: 1rem;
+    }
+
+    &__notification-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        &__:focus {}
+    }
+
+    &__icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
