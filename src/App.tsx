@@ -1,13 +1,13 @@
 import React from 'react';
-import AuthenticationPopUp from './components/AuthenticationPopUp/AuthenticationPopUp';
 import Header from './components/Header/Header';
 import HomePageLoggedOut from './pages/HomePageLoggedOut/HomePageLoggedOut';
+import HomePageLoggedIn from './pages/HomePageLoggedIn/HomePageLoggedIn';
 
 const App = () => {
     return (
         <div className="App">
             <Header />
-            <HomePageLoggedOut />
+            <HomePageLoggedIn />
         </div>
     );
 }
