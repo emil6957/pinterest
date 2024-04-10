@@ -25,11 +25,6 @@ const Header = ({ }: HeaderProps) => {
                         <h1 className="header__home-btn-text">Pinterest</h1>
                     </button>
                 </div>
-                <div className="header__links-wrapper">
-                    <button className="header__btn">Today</button>
-                    <button className="header__btn">Watch</button>
-                    <button className="header__btn">Explore</button>
-                </div>
             </div>
 
             <div className="header__wrapper">
