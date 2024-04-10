@@ -1,13 +1,12 @@
 import React from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import "./HeaderLoggedIn.scss";
+import { ReactComponent as NotificationBell } from "../../assets/images/notification-icon.svg"
 
 type HeaderLoggedInProps = {
 
 }
 
-// TODO: Make searchbar
-// TODO: Make notifications button
 // TODO: Make Profile Icon
 // TODO: Make Profile Settings page
 
@@ -19,6 +18,11 @@ const HeaderLoggedIn = ({ }: HeaderLoggedInProps) => {
                 <button className="header-logged-in__btn">Explore</button>
             </div>
             <SearchBar />
+            <button className="header-logged-in__notification-btn">
+                <NotificationBell />
+            </button>
+            <button>
+            </button>
         </header>
     )
 }
