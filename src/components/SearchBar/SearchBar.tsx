@@ -11,8 +11,8 @@ type SearchBarProps = {
 const SearchBar = ({ }: SearchBarProps) => {
     return (
         <div className="search-bar">
-            <SearchIcon />
-            <input className="search-bar__input" type="text" />
+            <SearchIcon className="search-bar__icon" />
+            <input className="search-bar__input" type="text" placeholder="Search" />
         </div>
     )
 }
