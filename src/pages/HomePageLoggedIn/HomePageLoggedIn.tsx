@@ -6,10 +6,9 @@ type HomePageLoggedInProps = {
 
 }
 
-const HomePageLoggedIn = ({}:HomePageLoggedInProps) => {
+const HomePageLoggedIn = ({ }: HomePageLoggedInProps) => {
     return (
-        <div>
-            <Header />
+        <div className="home-page-logged-in">
         </div>
     )
 }
